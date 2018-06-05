@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-
-class characterList extends Component {
-	constructer(){
-
-
-
-		// fetch(myRequest).then(function(response) {
-		// 	return response.blob();
-		// }).then()function(response) {
-		// 	var objectURL = URL.createObjectURL(response);
-
-		// }
-	}
-  render() {
-    return (
-    	<p></p>
-    );
-  }
+class characterList extends Component {	
+    constructor(props) {
+        super(props);
+        this.state = {
+            empty:null,
+        }
+    }
+    render(){
+        return(
+            <div></div>
+        )
+    }
 }
-
+	
 export default characterList;
