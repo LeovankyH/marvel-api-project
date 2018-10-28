@@ -20,6 +20,14 @@ class characterSearch extends Component {
 	render() {
 		return (
 			<div>
+				<div className="row search_placeholder">
+					<div className="col-md-8"> 
+						<img src={"marvel-logo.jpg"} alt=" " />
+					</div>
+					<div className="col-md-4">
+						<p>Lorem ispum</p>
+					</div>
+				</div>
 				<div clasName="row">
 					<div className="col-md-12">
 						<SearchForm transferData={this.submitData} />

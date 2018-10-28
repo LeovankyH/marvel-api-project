@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
+import React, {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
 class SearchForm extends Component {
   constructor() {
@@ -13,17 +13,15 @@ class SearchForm extends Component {
     };
   }
 
-  url(){
-      const host = "https://gateway.marvel.com/v1/public/characters?nameStartsWith=",
-       inputName = this.state.input,
-          apiKey = "&limit=1&apikey=953ef49150af11983418a524e7385266";
-   return host + inputName + apiKey;
+  url(){ 
+    const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${this.state.input}&limit=1&apikey=953ef49150af11983418a524e7385266`
+    return url;
   }
 
   handleChange(e){
     this.setState({input: e.target.value});
   }
-
+  
   handleSubmit(e){
     e.preventDefault();
     fetch(this.url())

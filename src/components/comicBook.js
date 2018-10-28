@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import App from '../App';
-import SearchForm from './SearchForm';
+
 class comicBook extends Component {	
     constructor(props) {
         super(props);
